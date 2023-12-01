@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:menu="@menu/top_app_bar"
+                app:title="Pizzarella Deliziosa"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:id="@+id/formContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintTop_toBottomOf="@id/topAppBar">
+            <TextView
+                android:id="@+id/nomLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nom:"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_gravity="start"
+                android:layout_marginStart="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nom"
+                android:layout_width="408dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/topAppBar"
+                app:startIconContentDescription="nom du client"
+                app:startIconDrawable="@drawable/baseline_person_2_24"
+                tools:ignore="MissingConstraints">
+
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Editnom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Saisissez votre nom"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/prénomLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prénom:"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_gravity="start"
+                android:layout_marginStart="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/prenom"
+                android:layout_width="408dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/topAppBar"
+                app:startIconContentDescription="prénom du client"
+                app:startIconDrawable="@drawable/baseline_person_outline_24"
+                tools:ignore="MissingConstraints">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Editprenom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Saisissez votre prénom"/>
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/adressLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adresse:"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_gravity="start"
+                android:layout_marginStart="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/adress"
+                android:layout_width="408dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/topAppBar"
+                app:startIconContentDescription="adress du client"
+                app:startIconDrawable="@drawable/baseline_person_pin_circle_24"
+                tools:ignore="MissingConstraints">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Editadress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Saisissez votre adresse"/>
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/PizzaTypeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type de Pizza:"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_gravity="start"
+                android:layout_marginStart="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/PizzaType"
+                android:layout_width="408dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/topAppBar"
+                app:startIconContentDescription=" type de pizza"
+                tools:ignore="MissingConstraints"
+                >
+<Spinner
+    android:id="@+id/pizzaTypeSpinner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Select Pizza Type"
+    android:inputType="none"
+    tools:ignore="TouchTargetSizeCheck"
+    android:spinnerMode="dropdown"
+    />
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp"  />
+            <TextView
+                android:id="@+id/SupplementLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingrédients supplémentaires:"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_gravity="start"
+                android:layout_marginStart="4dp"/>
+            <CheckBox
+                android:id="@+id/checkboxFromage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fromage"
+                android:layout_gravity="start" />
+
+            <CheckBox
+                android:id="@+id/checkboxChampignon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Champignon"
+                android:layout_gravity="start" />
+
+            <CheckBox
+                android:id="@+id/checkboxOlives"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Olives"
+                android:layout_gravity="start" />
+            <Button
+                android:id="@+id/confirmButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirmer"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

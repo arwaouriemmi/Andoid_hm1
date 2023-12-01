@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">hw1</string>
+    <string name="select_pizza_type_prompt">Choose Pizza Type</string>
+    <string-array name="pizza_types">
+        <item>Moyenne</item>
+        <item>Mini</item>
+        <item>Maxi</item>
+    </string-array>
+</resources>

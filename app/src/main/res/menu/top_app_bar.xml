@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <menu xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <item
+            android:icon="@drawable/baseline_favorite_24"
+            android:id="@+id/bestSeller"
+            android:title="Best Seller"
+            app:showAsAction="always"  />
+
+    <item
+        android:icon="@drawable/baseline_star_24"
+        android:id="@+id/rate"
+        android:title="Rate "
+        app:showAsAction="always"  />
+    <item
+        android:icon="@drawable/baseline_roundabout_right_24"
+        android:id="@+id/adress"
+        android:title="Our Location "
+        app:showAsAction="always"  />
+
+
+
+
+
+    </menu>
+
+
